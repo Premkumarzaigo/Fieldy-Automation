@@ -21,6 +21,8 @@ import com.Fieldy.TestBase.Constants;
 import com.Fieldy.TestUtility.DriverUtils;
 import com.Fieldy.TestUtility.ListenersUtils;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 @Listeners(ListenersUtils.class)
 public class FieldyRun extends BaseClass{
 
@@ -78,9 +80,7 @@ public class FieldyRun extends BaseClass{
 
 			WebElement welcomePageMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div[4]/div/div[1]/div/ol/li/div")));
 			Assert.assertTrue(welcomePageMessage.isDisplayed());
-
 			System.out.println("Info : --> : Login SuccessFully.....");
-
 		}
 
 		catch(TimeoutException e)
@@ -112,6 +112,8 @@ public class FieldyRun extends BaseClass{
 			Assert.assertTrue(welcomePageMessage.isDisplayed());
 
 			System.out.println("Info : --> : AMC Form Created SuccessFully.....");
+			System.out.println("Info : --> : Test Form Created SuccessFully.....");
+			
 		}
 		catch(TimeoutException e)
 		{
