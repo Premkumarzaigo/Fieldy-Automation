@@ -99,7 +99,7 @@ public class FieldyRun extends BaseClass{
 
 	}
 	
-	@Test(priority = 1,dependsOnMethods = "validateLogin",enabled = false)
+	@Test(priority = 1,dependsOnMethods = "validateLogin")
 	public void editAMCForm() throws InterruptedException
 	{
 		Thread.sleep(15000);
@@ -108,7 +108,7 @@ public class FieldyRun extends BaseClass{
 		amcFormPage.editAMCForm(7,"03-08-2024","03-08-2024","3.5");
 	}
 
-	@Test(priority = 1,dependsOnMethods = "validateLogin")
+	@Test(priority = 1,dependsOnMethods = "validateLogin",enabled = false)
 	public void formAMCCreation() throws InterruptedException
 	{
 		Thread.sleep(15000);
@@ -139,4 +139,4 @@ public class FieldyRun extends BaseClass{
 	}
 }
 
-Hai 
+
