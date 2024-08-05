@@ -98,9 +98,18 @@ public class FieldyRun extends BaseClass{
 
 
 	}
+	
+	@Test(priority = 1,dependsOnMethods = "validateLogin",enabled = false)
+	public void editAMCForm() throws InterruptedException
+	{
+		Thread.sleep(15000);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		dashBoardPage.clickAMCModule();
+		amcFormPage.editAMCForm(7,"03-08-2024","03-08-2024","3.5");
+	}
 
 	@Test(priority = 1,dependsOnMethods = "validateLogin")
-	public void formCreation() throws InterruptedException
+	public void formAMCCreation() throws InterruptedException
 	{
 		Thread.sleep(15000);
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -112,7 +121,7 @@ public class FieldyRun extends BaseClass{
 			Assert.assertTrue(welcomePageMessage.isDisplayed());
 
 			System.out.println("Info : --> : AMC Form Created SuccessFully.....");
-			System.out.println("Info : --> : Test Form Created SuccessFully.....");
+			
 			
 		}
 		catch(TimeoutException e)
@@ -129,3 +138,5 @@ public class FieldyRun extends BaseClass{
 		}
 	}
 }
+
+Hello
