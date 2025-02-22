@@ -9,8 +9,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Fieldy.TestBase.BaseClass;
 import com.Fieldy.TestBase.Constants;
@@ -37,6 +40,12 @@ public class DriverUtils extends BaseClass{
 	public static void implicitWait(int wait)
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(wait));
+	}
+	
+	public static WebElement webDriverWaitForVisibilityOfElementLocated(By locator)
+	{
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
 	public static void get(String pageURL)
@@ -127,6 +136,19 @@ public class DriverUtils extends BaseClass{
 	public static void sendKeysOnAlert(String value)
 	{
 		driver.switchTo().alert().sendKeys(value);
+	}
+	
+	public static void mouseHoverByLocator(By locator)
+	{
+		WebElement element=driver.findElement(locator);
+		Actions actions=new Actions(driver);
+		actions.moveToElement(element).perform();
+	}
+	
+	public static void mouseHoverByElement(WebElement element)
+	{
+		Actions actions=new Actions(driver);
+		actions.moveToElement(element).perform();
 	}
 	
 	public static void captureScreenShot(String fileName)

@@ -24,11 +24,15 @@ public class Constants {
 	
 	final public static String excelSheetsPath=".\\src\\test\\resources\\ExcelSheets";
 
-	final public static String pageURL="https://acerlaptopsales.zaigotech.com/login/";
+	final public static String pageURL="https://bagsales.getfieldy.com/";
 	
-	final public static String userName="prem20@mailinator.com";
+	final public static String userName="prem202@mailinator.com";
 	
-	final public static String password="Test@1234";
+	final public static String password="Test@123";
+	
+	final public static String technicianUserName="prem202@mailinator.com";
+	
+	final public static String technicianPassword="Test@123";
 	
 	
 }

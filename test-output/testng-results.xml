@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="9" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-22T10:57:02 IST" name="Default suite" finished-at="2025-02-22T10:57:57 IST" duration-ms="54881">
+    <groups>
+      <group name="editasset">
+        <method signature="FieldyRun.editAssetForm()[pri:6, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" name="editAssetForm" class="com.Fieldy.TestRunner.FieldyRun"/>
+      </group> <!-- editasset -->
+      <group name="pagedetails">
+        <method signature="FieldyRun.printCurrentURL()[pri:-1, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" name="printCurrentURL" class="com.Fieldy.TestRunner.FieldyRun"/>
+        <method signature="FieldyRun.printTitle()[pri:-2, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" name="printTitle" class="com.Fieldy.TestRunner.FieldyRun"/>
+      </group> <!-- pagedetails -->
+      <group name="login">
+        <method signature="FieldyRun.validateLogin()[pri:0, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" name="validateLogin" class="com.Fieldy.TestRunner.FieldyRun"/>
+      </group> <!-- login -->
+    </groups>
+    <test started-at="2025-02-22T10:57:02 IST" name="Default test" finished-at="2025-02-22T10:57:57 IST" duration-ms="54881">
+      <class name="com.Fieldy.TestRunner.FieldyRun">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" started-at="2025-02-22T10:57:02 IST" name="beforeClass" finished-at="2025-02-22T10:57:24 IST" duration-ms="21537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="printTitle()[pri:-2, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" started-at="2025-02-22T10:57:24 IST" name="printTitle" finished-at="2025-02-22T10:57:24 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printTitle -->
+        <test-method signature="printCurrentURL()[pri:-1, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" started-at="2025-02-22T10:57:24 IST" name="printCurrentURL" finished-at="2025-02-22T10:57:24 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printCurrentURL -->
+        <test-method signature="validateLogin()[pri:0, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" started-at="2025-02-22T10:57:24 IST" name="validateLogin" finished-at="2025-02-22T10:57:45 IST" duration-ms="20810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogin -->
+        <test-method signature="editAssetForm()[pri:6, instance:com.Fieldy.TestRunner.FieldyRun@437da279]" started-at="2025-02-22T10:57:45 IST" name="editAssetForm" finished-at="2025-02-22T10:57:57 IST" depends-on-methods="com.Fieldy.TestRunner.FieldyRun.validateLogin" duration-ms="12240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editAssetForm -->
+      </class> <!-- com.Fieldy.TestRunner.FieldyRun -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

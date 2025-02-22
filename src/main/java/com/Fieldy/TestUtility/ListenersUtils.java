@@ -36,8 +36,11 @@ public class ListenersUtils implements ITestListener{
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+		String name = result.getName();
+		String message=result.getThrowable().getMessage();
+		System.out.println("Info: - > The project runner class " + name + "Test got Failed");
 		
-		test.log(Status.FAIL, "Test Got Failed");
+		test.log(Status.FAIL, "Test Got Failed"+":"+message);
 		
 		DriverUtils.captureScreenShot("fail");
 		
